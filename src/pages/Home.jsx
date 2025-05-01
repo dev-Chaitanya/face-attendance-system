@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import "./Home.css";
-// import HeroImg from "../assets/Hero.png";
+import HeroImg from "../assets/Hero.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Cards } from "../components/Cards.jsx";
 // import Automated from "../assets/Automated.png"
