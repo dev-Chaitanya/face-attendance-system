@@ -11,6 +11,8 @@ import AttendanceRecords from "./pages/AttendanceRecords.jsx";
 import ManageAttendance from "./pages/ManageAttendance.jsx";
 import { Records } from "./pages/Records.jsx";
 import "./App.css";
+import { Route, Routes } from "react-router-dom";
+
 
 function App() {
   return (
