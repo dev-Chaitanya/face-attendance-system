@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 import "./Home.css";
 // import HeroImg from "../assets/Hero.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import { Cards } from "../components/Cards.jsx";
+import  Cards  from "../components/Cards.jsx";
 // import Automated from "../assets/Automated.png"
 // import Secure from "../assets/Secure.png"
 // import timeSaving from "../assets/Saving.png"

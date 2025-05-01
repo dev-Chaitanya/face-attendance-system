@@ -20,4 +20,4 @@ const Cards= ({ title, description, image ,order}) => {
 };
 
 
-export { Cards };
+export default Cards;
