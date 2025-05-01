@@ -1,0 +1,25 @@
+
+.Login-PopUp{
+
+  text-align: left;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.363), rgba(255, 255, 255, 0.484));
+  /* border: 1px solid rgba(255, 255, 255, 0.1); */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(0, 245, 255, 0.15);
+  border-radius: 16px;
+  padding: 2rem;
+z-index: 20000;
+}
+.popUp-content{
+  /* background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(0, 245, 255, 0.1)); */
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+.showpassword{
+  height: 13px !important;
+  filter: invert(23);
+}
