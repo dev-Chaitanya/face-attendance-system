@@ -11,7 +11,17 @@ node_modules
 dist
 dist-ssr
 *.local
+# Dependency directories
+# node_modules/
+build/
+.env
 
+__pycache__/
+instance/
+.env
+*.pyc
+venv/
+uploads/
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
@@ -22,3 +32,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# General
+.DS_Store
+*.log
+*.jpg
+*.jpeg
+*.png
