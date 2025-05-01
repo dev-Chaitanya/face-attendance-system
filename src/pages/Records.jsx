@@ -3,7 +3,7 @@ import Sidebar from "../components/Sidebar.jsx";
 import Swal from "sweetalert2";
 import "./Records.css";
 import {  useNavigate } from "react-router-dom";
-export const Records = () => {
+  const Records = () => {
   let [AllStudents, setAllStudents] = useState([]);
   let [SelectedIds, setSelectedIds] = useState([]);
   const navigate=useNavigate;
@@ -135,3 +135,5 @@ export const Records = () => {
     </div>
   );
 };
+
+export default Records;

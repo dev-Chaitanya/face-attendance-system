@@ -9,7 +9,7 @@ import Dashboard from "./components/Dasboard.jsx";
 import StudentRegister from "./pages/StudentRegister.jsx";
 import AttendanceRecords from "./pages/AttendanceRecords.jsx";
 import ManageAttendance from "./pages/ManageAttendance.jsx";
-import { Records } from "./pages/Records.jsx";
+import Records from "./pages/Records.jsx";
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
 
