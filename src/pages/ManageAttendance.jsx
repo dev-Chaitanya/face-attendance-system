@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import Webcam from "react-webcam";
-import Sidebar from "../components/Sidebar.jsx";
+import Sidebar from "../components/Sidebar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../components/Styles/ManageAttandance.css";
 import Swal from 'sweetalert2';
