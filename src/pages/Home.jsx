@@ -83,13 +83,13 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="Section-content container-fluid p-2 "> 
+      {/* <div className="Section-content container-fluid p-2 "> 
         {cardContents.map((card, index) => {
           return (
             <Cards key={index} title={card.title} description={card.description} order={card.order} image={card.img} />
           );
         })}
-      </div>
+      </div> */}
       <Footer/> 
          </div>
   );
