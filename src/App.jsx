@@ -3,10 +3,10 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js'; // Include Bootstrap JS with
 import 'sweetalert2/dist/sweetalert2.min.css';
 
 // import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home from "./pages/Home";
-import Register from "./components/Auth/Register";
+import Home from "./pages/Home.jsx";
+import Register from "./components/Auth/Register.jsx";
 import Dashboard from "./components/Dasboard.jsx";
-import StudentRegister from "./pages/StudentRegister";
+import StudentRegister from "./pages/StudentRegister.jsx";
 import AttendanceRecords from "./pages/AttendanceRecords.jsx";
 import ManageAttendance from "./pages/ManageAttendance.jsx";
 import { Records } from "./pages/Records.jsx";

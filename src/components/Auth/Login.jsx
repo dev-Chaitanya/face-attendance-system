@@ -77,17 +77,17 @@ const Login = () => {
 
   return (
     <div
-      class="modal fade"
+      className="modal fade"
       id="staticBackdrop"
       data-bs-backdrop="static"
       data-bs-keyboard="false"
-      tabindex="-1"
+      tabIndex="-1"
       aria-labelledby="staticBackdropLabel"
       aria-hidden="true"
     >
-       <div class="modal-dialog">
+       <div className="modal-dialog">
 
-       <div class="popUp-content modal-content">
+       <div className="popUp-content modal-content">
 
       <div
         className="Login-PopUp card p-4 shadow-lg"
@@ -95,7 +95,7 @@ const Login = () => {
       >
         <div className="card-header d-flex justify-content-around align-items-start p-0  border-0" style={{background:"none"}}>
         <h2 className="text-center mb-4 ">Admin Login </h2>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
         <form onSubmit={handleLogin}>
@@ -142,7 +142,7 @@ const Login = () => {
           <button type="submit" className="btn btn-primary w-100">
             Login
           </button>
-          <button type="button" class="btn btn-secondary w-100  mt-2" data-bs-dismiss="modal">Close</button>
+          <button type="button" className="btn btn-secondary w-100  mt-2" data-bs-dismiss="modal">Close</button>
         </form>
       </div>
       </div>
