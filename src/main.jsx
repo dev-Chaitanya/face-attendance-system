@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import React,{ StrictMode } from 'react'
 import { createRoot ,HashRouter} from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
