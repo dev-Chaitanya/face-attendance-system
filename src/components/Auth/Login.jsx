@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../Auth/Login.css";
 import { Link, useNavigate } from "react-router-dom";
-import Navbar from "../Navbar";
-import eyeIcon from "../../assets/eye.png";
-import hideIcon from "../../assets/hidden.png";
+import Navbar from "../Navbar.jsx";
+// import eyeIcon from "../../assets/eye.png";
+// import hideIcon from "../../assets/hidden.png";
 import Swal from "sweetalert2";
 
 const Login = () => {
