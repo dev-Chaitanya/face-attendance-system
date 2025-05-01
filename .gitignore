@@ -9,6 +9,9 @@ venv*/
 __pycache__/
 *.pyc
 
+#src
+assets/
+
 # Logs and debug files
 logs/
 *.log

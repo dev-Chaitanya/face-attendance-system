@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import "./Home.css";
-import HeroImg from "../assets/Hero.png";
+// import HeroImg from "../assets/Hero.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Cards } from "../components/Cards.jsx";
 // import Automated from "../assets/Automated.png"
@@ -79,7 +79,7 @@ const Home = () => {
             </div>
           </div>
           <div className="co-6 col-sm-auto col-md-6 col-lg-6 ">
-            <img src={HeroImg} className="HeroImg p-0 d-none d-sm-block d-md-block d-lg-block rounded-start" alt="..."/>     
+            {/* <img src={HeroImg} className="HeroImg p-0 d-none d-sm-block d-md-block d-lg-block rounded-start" alt="..."/>      */}
           </div>
         </div>
       </div>
