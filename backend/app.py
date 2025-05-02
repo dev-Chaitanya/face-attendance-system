@@ -25,8 +25,10 @@ from models.attendance_model import (
     attendance_collection
 )
 
+
+# Allow cross-origin requests from your frontend (change to your frontend's URL)
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://face-attendance-system-rr87.onrender.com", "http://localhost:3000"])  # Add both URLs for production and local development
 
 @app.route("/")
 def home():
