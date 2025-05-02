@@ -70,7 +70,7 @@ function Register() {
     if (!validateForm()) return;
 
     try {
-      const res = await fetch("http://127.0.0.1:5000/api/register", {
+      const res = await fetch("https://face-attendance-system-rr87.onrender.com/api/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

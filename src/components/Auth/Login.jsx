@@ -26,7 +26,7 @@ const Login = () => {
     formData.append("password", password);
 
     try {
-      const res = await fetch("http://127.0.0.1:5000/api/login", {
+      const res = await fetch("https://face-attendance-system-rr87.onrender.com/api/login", {
         method: "POST",
         body: formData,
       });
