@@ -70,7 +70,7 @@ function Register() {
     if (!validateForm()) return;
 
     try {
-      const res = await fetch("https://face-attendance-system-rr87.onrender.com/api/register", {
+      const res = await fetch("http://localhost:5173/api/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -87,7 +87,7 @@ function Register() {
       if (result.success) {
         const registerModal = document.getElementById("exampleModalRegister");
         const modalBackdrop = document.querySelector(".modal-backdrop");
-      
+
         if (registerModal) {
           registerModal.classList.remove("show");
           registerModal.style.display = "none";
@@ -96,7 +96,7 @@ function Register() {
         if (modalBackdrop) {
           modalBackdrop.remove();
         }
-      
+
         Swal.fire({
           icon: "success",
           title: "Registered Successfully!",
@@ -104,16 +104,16 @@ function Register() {
           timer: 2000,
           showConfirmButton: false,
         });
-      
+
         const adminData = {
           id: result.admin_id,
           name: user.name,
           email: user.email,
         };
         localStorage.setItem("admin", JSON.stringify(adminData));
-      
+
         setTimeout(() => navigate("/dashboard"), 2000);
-      }else {
+      } else {
         Swal.fire({
           icon: "error",
           title: "Registration Failed",
@@ -142,8 +142,13 @@ function Register() {
         <div class="Register-content modal-content">
           <div className="Form-box d-flex flex-column justify-content-center container w-50 text-white">
             <div className="d-flex justify-content-around">
-            <h2 className="text-center">Admin Register</h2>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h2 className="text-center">Admin Register</h2>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
             </div>
             <form onSubmit={handleSubmit} className="p-3 mx-auto">
               {/* Name Field */}
@@ -229,7 +234,13 @@ function Register() {
               <button type="submit" className="btn btn-primary w-100">
                 Register
               </button>
-              <button type="button" class="btn btn-secondary w-100 mt-2" data-bs-dismiss="modal">Close</button>
+              <button
+                type="button"
+                class="btn btn-secondary w-100 mt-2"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
             </form>
           </div>
         </div>

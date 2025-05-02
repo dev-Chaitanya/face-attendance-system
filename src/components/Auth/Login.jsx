@@ -26,7 +26,7 @@ const Login = () => {
     formData.append("password", password);
 
     try {
-      const res = await fetch("https://face-attendance-system-rr87.onrender.com/api/login", {
+      const res = await fetch("http://127.0.0.1:5000/api/login", {
         method: "POST",
         body: formData,
       });
@@ -37,7 +37,7 @@ const Login = () => {
         // Hide the modal manually before navigation
         const modalElement = document.getElementById("staticBackdrop");
         const modalBackdrop = document.querySelector(".modal-backdrop");
-      
+
         if (modalElement) {
           modalElement.classList.remove("show");
           modalElement.style.display = "none";
@@ -46,7 +46,7 @@ const Login = () => {
         if (modalBackdrop) {
           modalBackdrop.remove(); // Remove the black overlay
         }
-      
+
         Swal.fire({
           icon: "success",
           title: "Login Successful",
@@ -54,7 +54,7 @@ const Login = () => {
           timer: 2000,
           showConfirmButton: false,
         });
-      
+
         localStorage.setItem("admin", JSON.stringify(data.admin));
         setTimeout(() => navigate("/dashboard"), 2000);
       }

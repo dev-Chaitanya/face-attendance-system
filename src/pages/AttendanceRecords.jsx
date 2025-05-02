@@ -30,35 +30,37 @@ const AttendanceRecords = () => {
     present: [],
   });
 
- 
+  async function summeryStatsUpdate(data) {
+    let totalStudent = await data.records.length;
+    let notMarked = await data.records.filter((rec, index) => {
+      if (rec.status === "Not Marked") {
+        return rec;
+      }
+    });
 
-async function summeryStatsUpdate(data){
-
-  let totalStudent = await data.records.length;
-          let notMarked = await data.records.filter((rec, index) => {
-            if (rec.status === "Not Marked") {
-
-              return rec;
-            }
-          });
-          
-          let marked = await data.records.filter((rec,index)=>{
-            if(rec.status != "Not Marked"){
-              return rec
-            }
-          })
-      let present= await data.records.filter((rec)=>{
-        if(rec.status==="Present"){
-          return rec
-        }
-      })
-          let absent= await data.records.filter((rec,index)=>{
-            if(rec.status==="Absent"){
-              return rec
-            }
-          })
-          setSummery({totalStudents:totalStudent,notMarked:notMarked,marked:marked,absent:absent,present:present});
-}
+    let marked = await data.records.filter((rec, index) => {
+      if (rec.status != "Not Marked") {
+        return rec;
+      }
+    });
+    let present = await data.records.filter((rec) => {
+      if (rec.status === "Present") {
+        return rec;
+      }
+    });
+    let absent = await data.records.filter((rec, index) => {
+      if (rec.status === "Absent") {
+        return rec;
+      }
+    });
+    setSummery({
+      totalStudents: totalStudent,
+      notMarked: notMarked,
+      marked: marked,
+      absent: absent,
+      present: present,
+    });
+  }
 
   useEffect(() => {
     const admin = JSON.parse(localStorage.getItem("admin"));
@@ -75,7 +77,7 @@ async function summeryStatsUpdate(data){
         if (data.success) {
           setRecords(data.records);
           setFilteredRecords(data.records);
-         summeryStatsUpdate(data)
+          summeryStatsUpdate(data);
         }
       })
       .catch((err) => console.error("Error fetching records:", err));
@@ -203,7 +205,7 @@ async function summeryStatsUpdate(data){
         if (data.success) {
           setRecords(data.records);
           applyFilters(data.records); // pass records to filter
-          summeryStatsUpdate(data.records)
+          summeryStatsUpdate(data.records);
         }
       });
   };
@@ -338,18 +340,22 @@ async function summeryStatsUpdate(data){
           </div>
 
           <div className="col-6 col-md-4">
-            <strong>Attendance Marked: </strong>{summery.marked.length}
+            <strong>Attendance Marked: </strong>
+            {summery.marked.length}
           </div>
 
           <div className="col-6 col-md-4">
-            <strong>Not Marked: </strong>{summery.notMarked.length}
+            <strong>Not Marked: </strong>
+            {summery.notMarked.length}
           </div>
           <div className="col-6 col-md-4">
-            <strong>Present: </strong>{summery.present.length}
+            <strong>Present: </strong>
+            {summery.present.length}
           </div>
 
           <div className="col-6 col-md-4">
-            <strong>Absent: </strong>{summery.absent.length}
+            <strong>Absent: </strong>
+            {summery.absent.length}
           </div>
 
           <div className="col-6 col-md-4">

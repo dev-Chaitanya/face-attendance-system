@@ -10,7 +10,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "proxy": "https://face-attendance-system-rr87.onrender.com"
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
