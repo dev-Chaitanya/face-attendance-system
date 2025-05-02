@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Sidebar from "../components/Sidebar.jsx"
+import Sidebar from "./Sidebar.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../components/Styles/Dashboard.css";
 import { Line, Pie } from "react-chartjs-2";
@@ -76,15 +76,23 @@ const Dashboard = () => {
 
           const today = new Date().toISOString().split("T")[0];
           const todaysRecords = allRecords.filter((r) => r.date === today);
-          setPresentToday(todaysRecords.filter((r) => r.status === "Present").length);
-          setAbsentToday(todaysRecords.filter((r) => r.status === "Absent").length);
+          setPresentToday(
+            todaysRecords.filter((r) => r.status === "Present").length
+          );
+          setAbsentToday(
+            todaysRecords.filter((r) => r.status === "Absent").length
+          );
 
           const sortedDates = [...unique].sort().slice(-7);
-          const trendPresent = sortedDates.map((d) =>
-            allRecords.filter((r) => r.date === d && r.status === "Present").length
+          const trendPresent = sortedDates.map(
+            (d) =>
+              allRecords.filter((r) => r.date === d && r.status === "Present")
+                .length
           );
-          const trendAbsent = sortedDates.map((d) =>
-            allRecords.filter((r) => r.date === d && r.status === "Absent").length
+          const trendAbsent = sortedDates.map(
+            (d) =>
+              allRecords.filter((r) => r.date === d && r.status === "Absent")
+                .length
           );
 
           setTrends({
@@ -95,8 +103,7 @@ const Dashboard = () => {
         }
       });
   }, []);
- 
-  
+
   return (
     <div className="dashboard-page h-100 d-flex">
       <Sidebar />
@@ -203,7 +210,7 @@ const Dashboard = () => {
             <div className="branch-container  rounded shadow p-4">
               <h4 className="mb-4">🏫 Branch-wise Student Count</h4>
               {Object.keys(branchWiseData).length > 0 ? (
-                <div style={{ height: "300px",width: "100%" }}>
+                <div style={{ height: "300px", width: "100%" }}>
                   <Pie
                     data={{
                       labels: Object.keys(branchWiseData),
