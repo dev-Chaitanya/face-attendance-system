@@ -5,7 +5,7 @@ import 'sweetalert2/dist/sweetalert2.min.css';
 // import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Register from "./components/Auth/Register";
-import Dashboard from "./components/Dasboard";
+import Dashboard from "./components/Dashboard"; // Corrected the file path
 import StudentRegister from "./pages/StudentRegister";
 import AttendanceRecords from "./pages/AttendanceRecords";
 import ManageAttendance from "./pages/ManageAttendance";
