@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import "./Home.css";
-// import HeroImg from "../assets/Hero.png";
+import HeroImg from "../assets/Hero.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
-// import  Cards  from "../components/Cards.jsx";
-// import Automated from "../assets/Automated.png"
-// import Secure from "../assets/Secure.png"
-// import timeSaving from "../assets/Saving.png"
+import  Cards  from "../components/Cards.jsx";
+import Automated from "../assets/Automated.png"
+import Secure from "../assets/Secure.png"
+import timeSaving from "../assets/Saving.png"
 import userFriendly from "../assets/userFriendly.png"
-// import realTime from "../assets/RealTime.png"
+import realTime from "../assets/RealTime.png"
 import Footer from "../components/Footer";
 import Login from "../components/Auth/Login";
 import Register from "../components/Auth/Register";
@@ -79,17 +79,17 @@ const Home = () => {
             </div>
           </div>
           <div className="co-6 col-sm-auto col-md-6 col-lg-6 ">
-            {/* <img src={HeroImg} className="HeroImg p-0 d-none d-sm-block d-md-block d-lg-block rounded-start" alt="..."/>      */}
+            <img src={HeroImg} className="HeroImg p-0 d-none d-sm-block d-md-block d-lg-block rounded-start" alt="..."/>     
           </div>
         </div>
       </div>
-      {/* <div className="Section-content container-fluid p-2 "> 
+      <div className="Section-content container-fluid p-2 "> 
         {cardContents.map((card, index) => {
           return (
             <Cards key={index} title={card.title} description={card.description} order={card.order} image={card.img} />
           );
         })}
-      </div> */}
+      </div>
       <Footer/> 
          </div>
   );

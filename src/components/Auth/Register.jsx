@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "../Auth/Register.css";
 import Navbar from "../Navbar";
 import { useNavigate } from "react-router-dom"; // 👈 import this at the top
-// import eye from "../../assets/eye.png";
-// import hide from "../../assets/hidden.png";
+import eye from "../../assets/eye.png";
+import hide from "../../assets/hidden.png";
 import Swal from "sweetalert2";
 
 function Register() {

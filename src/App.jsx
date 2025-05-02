@@ -11,21 +11,24 @@ import AttendanceRecords from "./pages/AttendanceRecords";
 import ManageAttendance from "./pages/ManageAttendance";
 import Records from "./pages/Records";
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
+import {  HashRouter,Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div className="App vh-100">
+       <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/login" element={<Login />} />     */}
-        {/* <Route path="/register" element={<Register />} /> */}
-        {/* <Route path="/dashboard" element={<Dashboard />} /> */}
-        {/* <Route path="/register-student" element={<StudentRegister />} /> */}
-        {/* <Route path="/attendance-records" element={<AttendanceRecords />} /> */}
-        {/* <Route path="/manage-attendance" element={<ManageAttendance />} /> */}
-        {/* <Route path="/Records" element={<Records />} /> */}
+        <Route path="/login" element={<Login />} />    
+        <Route path="/register" element={<Register />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/register-student" element={<StudentRegister />} />
+        <Route path="/attendance-records" element={<AttendanceRecords />} />
+        <Route path="/manage-attendance" element={<ManageAttendance />} />
+        <Route path="/Records" element={<Records />} />
       </Routes>
+      </HashRouter>
+
     </div>
   );
 }
